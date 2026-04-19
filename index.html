@@ -3,99 +3,274 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ranking Competitivo Dermocosmética</title>
+<title>Diagnóstico Dermarket</title>
+
 <style>
-body{margin:0;font-family:'Segoe UI',sans-serif;background:#fff7ee;color:#8a663f}
-.container{max-width:1200px;margin:60px auto;padding:20px}
-h1{text-align:center;font-weight:600;letter-spacing:2px;margin-bottom:40px}
-.table-container{overflow-x:auto;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,0.08);background:#ffffff}
-table{width:100%;border-collapse:collapse}
-thead{background:#e8debd}
-th{padding:16px;font-size:13px;text-transform:uppercase;letter-spacing:1px}
-td{padding:16px;text-align:center;font-size:14px;border-bottom:1px solid #f0e6d6}
-tr{transition:all .3s ease}
-tbody tr:hover{background:#fff;transform:scale(1.01);box-shadow:0 8px 20px rgba(0,0,0,0.06)}
-.rank{font-weight:600}
-.brand{text-align:left;font-weight:500}
-.badge{padding:6px 12px;border-radius:20px;font-size:12px;background:#8a663f;color:#fff}
-.metric{font-weight:500}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:'Segoe UI',sans-serif;
+background:linear-gradient(180deg,#fff7ee,#f3eadf);
+color:#6b4f2c;
+}
+
+/* HERO */
+.hero{
+height:85vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+background:url('https://img.freepik.com/foto-gratis/mujer-casa-aplicando-mascara-crema_23-2148795750.jpg') center/cover fixed;
+position:relative;
+}
+.hero::after{
+content:"";
+position:absolute;
+width:100%;height:100%;
+background:rgba(0,0,0,0.35);
+}
+.hero-content{
+position:relative;
+z-index:2;
+color:#fff;
+}
+.hero h1{
+font-size:54px;
+letter-spacing:4px;
+}
+.hero p{
+margin-top:10px;
+opacity:.9;
+}
+
+/* SECTION */
+.section{
+padding:45px 20px;
+max-width:1200px;
+margin:auto;
+opacity:0;
+transform:translateY(30px);
+transition:.7s;
+}
+.section.show{opacity:1;transform:translateY(0)}
+
+/* INSIGHT */
+.insight{
+text-align:center;
+font-size:20px;
+max-width:650px;
+margin:auto;
+line-height:1.5;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:18px;
+margin-top:20px;
+}
+
+/* CARD */
+.card{
+background:rgba(255,255,255,0.65);
+backdrop-filter:blur(10px);
+padding:18px;
+border-radius:18px;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+transition:.35s;
+}
+.card:hover{
+transform:translateY(-5px) scale(1.01);
+box-shadow:0 15px 40px rgba(138,102,63,0.2);
+}
+
+/* BRAND */
+.brand a{
+text-decoration:none;
+color:#8a663f;
+font-weight:600;
+font-size:17px;
+}
+
+/* BIG */
+.big{
+font-size:26px;
+font-weight:600;
+margin:8px 0;
+}
+
+/* METRICS */
+.metrics{
+display:grid;
+grid-template-columns:1fr 1fr;
+font-size:12px;
+gap:3px;
+opacity:.85;
+}
+
+/* TABLE */
+.table{
+margin-top:25px;
+background:#fff;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+.table table{
+width:100%;
+border-collapse:collapse;
+font-size:13px;
+}
+
+.table th{
+background:#8a663f;
+color:#fff;
+padding:10px;
+}
+
+.table td{
+padding:8px;
+text-align:center;
+border-bottom:1px solid #eee;
+}
+
+/* COLORS */
 .low{color:#c94c4c}
-.mid{color:#d4a373}
-.high{color:#6a994e}
-@media(max-width:768px){th,td{padding:10px;font-size:12px}}
+.mid{color:#c49a6c}
+.high{color:#4a7c59}
 </style>
 </head>
+
 <body>
-<div class="container">
-<h1>Ranking Competitivo Digital</h1>
-<div class="table-container">
+
+<!-- HERO -->
+<section class="hero">
+<div class="hero-content">
+<h1>DIAGNÓSTICO DIGITAL</h1>
+<p>Dermarket vs Competencia</p>
+</div>
+</section>
+
+<!-- INSIGHT -->
+<section class="section">
+<div class="insight">
+Las marcas líderes convierten datos en crecimiento. Dermarket aún no construye ese sistema.
+</div>
+</section>
+
+<!-- CARDS -->
+<section class="section">
+<div class="grid">
+
+<div class="card">
+<div class="brand"><a href="https://www.medipiel.com.co/" target="_blank">Medipiel</a></div>
+<div class="big counter high" data-target="420000">0</div>
+<div class="metrics">
+<div>Autoridad: 48</div><div>SEO: 72</div>
+<div>UX: 4.6</div><div>UI: 4.4</div>
+<div>Duración: 5.8</div><div>Rebote: 58%</div>
+</div>
+</div>
+
+<div class="card">
+<div class="brand"><a href="https://www.bellapiel.com.co/" target="_blank">Bella Piel</a></div>
+<div class="big counter high" data-target="482500">0</div>
+<div class="metrics">
+<div>Autoridad: 36</div><div>SEO: 64</div>
+<div>UX: 3.9</div><div>UI: 3.8</div>
+<div>Duración: 6.1</div><div>Rebote: 70%</div>
+</div>
+</div>
+
+<div class="card">
+<div class="brand"><a href="https://lineaestetica.co/" target="_blank">Linea Estética</a></div>
+<div class="big counter mid" data-target="110000">0</div>
+<div class="metrics">
+<div>Autoridad: 32</div><div>SEO: 58</div>
+<div>UX: 3.6</div><div>UI: 3.5</div>
+<div>Duración: 4.3</div><div>Rebote: 64%</div>
+</div>
+</div>
+
+<div class="card">
+<div class="brand"><a href="https://dermarket.com/" target="_blank">Dermarket</a></div>
+<div class="big counter low" data-target="18000">0</div>
+<div class="metrics">
+<div>Autoridad: 18</div><div>SEO: 42</div>
+<div>UX: 2.7</div><div>UI: 2.9</div>
+<div>Duración: 2.1</div><div>Rebote: 78%</div>
+</div>
+</div>
+
+</div>
+
+<!-- TABLE -->
+<div class="table">
 <table>
 <thead>
 <tr>
-<th>Ranking</th>
 <th>Marca</th>
 <th>Tráfico</th>
 <th>Autoridad</th>
-<th>UI</th>
-<th>UX</th>
 <th>SEO</th>
+<th>UX</th>
 <th>Duración</th>
 <th>Rebote</th>
 <th>Páginas</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td class="rank">1</td>
-<td class="brand">Medipiel</td>
-<td class="metric high">420000</td>
-<td class="metric high">48</td>
-<td class="metric high">4.4</td>
-<td class="metric high">4.6</td>
-<td class="metric high">72</td>
-<td>5.8</td>
-<td class="mid">58%</td>
-<td class="high">4.2</td>
-</tr>
-<tr>
-<td class="rank">2</td>
-<td class="brand">Bella Piel</td>
-<td class="metric high">482500</td>
-<td class="metric mid">36</td>
-<td class="metric mid">3.8</td>
-<td class="metric mid">3.9</td>
-<td class="metric mid">64</td>
-<td>6.1</td>
-<td class="low">70%</td>
-<td class="mid">3.6</td>
-</tr>
-<tr>
-<td class="rank">3</td>
-<td class="brand">Dermatológica</td>
-<td class="metric mid">110000</td>
-<td class="metric mid">32</td>
-<td class="metric mid">3.5</td>
-<td class="metric mid">3.6</td>
-<td class="metric mid">58</td>
-<td>4.3</td>
-<td class="mid">64%</td>
-<td class="mid">3.1</td>
-</tr>
-<tr>
-<td class="rank">4</td>
-<td class="brand">Dermarket</td>
-<td class="metric low">18000</td>
-<td class="metric low">18</td>
-<td class="metric low">2.9</td>
-<td class="metric low">2.7</td>
-<td class="metric low">42</td>
-<td>2.1</td>
-<td class="low">78%</td>
-<td class="low">1.9</td>
-</tr>
+<tr><td>Medipiel</td><td>420K</td><td>48</td><td>72</td><td>4.6</td><td>5.8</td><td>58%</td><td>4.2</td></tr>
+<tr><td>Bella Piel</td><td>482K</td><td>36</td><td>64</td><td>3.9</td><td>6.1</td><td>70%</td><td>3.6</td></tr>
+<tr><td>Linea Estética</td><td>110K</td><td>32</td><td>58</td><td>3.6</td><td>4.3</td><td>64%</td><td>3.1</td></tr>
+<tr><td>Dermarket</td><td>18K</td><td>18</td><td>42</td><td>2.7</td><td>2.1</td><td>78%</td><td>1.9</td></tr>
 </tbody>
 </table>
 </div>
+
+</section>
+
+<!-- CIERRE -->
+<section class="section">
+<div class="insight">
+Dermarket no compite en tráfico, experiencia ni posicionamiento. La oportunidad está en construir un sistema digital integral.
 </div>
+</section>
+
+<script>
+const sections=document.querySelectorAll('.section');
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+
+/* CONTADORES */
+entry.target.querySelectorAll('.counter').forEach(counter=>{
+let target=+counter.dataset.target;
+let count=0;
+let step=target/50;
+
+let update=()=>{
+count+=step;
+if(count<target){
+counter.innerText=Math.floor(count);
+requestAnimationFrame(update);
+}else{
+counter.innerText=target.toLocaleString();
+}
+};
+update();
+});
+
+}
+});
+},{threshold:.3});
+
+sections.forEach(sec=>observer.observe(sec));
+</script>
+
 </body>
 </html>
